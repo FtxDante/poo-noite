@@ -4,17 +4,10 @@ public class Voo {
     private final String destino;
     private static int bilheteVendidos;
     private static int passageirosAbordo;
-
-    public String getPassageiroNome() {
-        return passageiro.nome;
-    }
-
-    public void setPassageiro(Passageiro passageiro) {
-        this.passageiro = passageiro;
-    }
-
-    public Voo(Passageiro passageiro, String origem, String destino, Boolean entrou){
-        if(entrou){
+    // Construtor
+    public Voo(){} 
+    public Voo(Passageiro passageiro, String origem, String destino, Boolean seChegou){
+        if(seChegou){
             passageiroEntrou();
         }
         this.passageiro = passageiro;
@@ -23,12 +16,21 @@ public class Voo {
         bilheteVendidos++;
     }
 
+    // Metodo para subtrair os passageiros abordo e os bilhetes vendidos
     public int diferencaPassageirosEBilhetes(){
         return getPassageirosAbordo() - getBilheteVendidos();
     }
-
+    // Adiciona um passageiro no avião
     private void passageiroEntrou(){
         passageirosAbordo++;
+    }
+
+    public String getPassageiroNome() {
+        return passageiro.nome;
+    }
+
+    public void setPassageiro(Passageiro passageiro) {
+        this.passageiro = passageiro;
     }
 
     public String getOrigem() {
