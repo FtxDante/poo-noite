@@ -5,7 +5,6 @@ public class Voo {
     private static int bilheteVendidos;
     private static int passageirosAbordo;
     // Construtor
-    public Voo(){} 
     public Voo(Passageiro passageiro, String origem, String destino, Boolean seChegou){
         if(seChegou){
             passageiroEntrou();
