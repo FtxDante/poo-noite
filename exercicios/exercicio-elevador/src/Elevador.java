@@ -1,7 +1,7 @@
 public class Elevador {
     private int andarAtual;
-    private int totalDeAndares; //Desconsiderando o térreo
-    private int capacidadeDoElevador; //Em pessoas
+    private final int totalDeAndares; //Desconsiderando o térreo
+    private final int capacidadeDoElevador; //Em pessoas
     private int pessoasPresentes;
 
     Elevador(int totalDeAndares, int capacidadeDoElevador){
@@ -49,7 +49,7 @@ public class Elevador {
 
     public void status(){
         System.out.println("Andar: " + andarAtual);
-        System.out.println("Pessoas dentro: " + pessoasPresentes);
+        System.out.println("Quantidade de pessoas: " + pessoasPresentes);
     }
 
 }

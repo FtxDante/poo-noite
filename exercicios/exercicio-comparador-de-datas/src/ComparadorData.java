@@ -2,9 +2,9 @@ import org.w3c.dom.ls.LSOutput;
 
 public class ComparadorData {
     //Atributos
-    private int dia;
-    private int mes;
-    private int ano;
+    private final int dia;
+    private final int mes;
+    private final int ano;
 
     public ComparadorData(int dia, int mes, int ano){
         this.dia = dia;
