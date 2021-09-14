@@ -7,9 +7,11 @@ public class TesteCirculo {
 
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
+
         //Circulos no Sistema
         cadastrados[0] = new Circulo(9);
         cadastrados[1] = new Circulo(3);
+
         //Inicializa o vetor de circulo.
         System.out.println("Quantos circulos você deseja criar? ");
         int qtdCirculos = leitor.nextInt();
@@ -17,14 +19,14 @@ public class TesteCirculo {
 
         //Modifica os circulos cadastrados
         System.out.println("Existem " + cadastrados.length + " circulos cadastrados");
-        System.out.println("Digite -1 para ver os circulos");
+        System.out.println("Digite -1 para ver e editar os circulos ou 0 para sair");
         int verCirculos = leitor.nextInt();
         if(verCirculos == -1){
             for (int controle = 0; controle < cadastrados.length; controle++){
                 informacoesDoCirculo(cadastrados, controle);
                 confereCirculo(leitor, cadastrados, controle, "Digite -1 para EDITAR, ou 0 para CONTINUAR.", "Digite o Raio: ");
                 informacoesDoCirculo(cadastrados,controle);
-                System.out.println("------------------------------");
+                System.out.println("-----------------------------------------------------");
             }
         }
         //Cria novos circulos
