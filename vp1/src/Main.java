@@ -93,6 +93,7 @@ public class Main {
             double valor = scanner.nextDouble();
             caixa1.transferir(valor, numConta, numConta2);
             caixa1.visualizar(numConta);
+            caixa1.visualizar(numConta2);
     }
 
     public static void realizaVisualizacao(Scanner scanner, CaixaEletronico caixa1){
