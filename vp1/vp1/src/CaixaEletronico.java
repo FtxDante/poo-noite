@@ -1,6 +1,6 @@
 public class CaixaEletronico {
-    public static ContaCorrente[] contas = new ContaCorrente[10];
-    public ContaCorrente contaSalva;
+    private static ContaCorrente[] contas = new ContaCorrente[10];
+    private ContaCorrente contaSalva;
 
     public void abrirContaCorrente(String cpf){
         this.contas[ContaCorrente.getContasCriadas()] = new ContaCorrente(cpf);
