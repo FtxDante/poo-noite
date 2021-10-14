@@ -1,12 +1,13 @@
 import java.util.Random;
 
 public class Main {
+
+    private static Quadrilatero quadrilateros[] = new Quadrilatero[5];
+
     public static void main(String[] args) {
-        Quadrilatero quadrilateros[] = new Quadrilatero[5];
 
-        int opcao = (int) Math.random() * 100;
-
-        switch (opcao){
+        Random opcao = new Random(3);
+        switch (opcao.nextInt()){
             case 0:
                 // Retangulo
                 break;

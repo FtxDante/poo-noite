@@ -1,7 +1,7 @@
 public class Circulo extends Quadrilatero{
 
     private final float raio;
-    private float pi = (float) Math.PI;
+    private final float pi = (float) Math.PI;
 
     Circulo(float raio){
         this.raio = raio;
@@ -9,15 +9,19 @@ public class Circulo extends Quadrilatero{
 
     @Override
     public float calcularArea() {
-        float raio = this.raio;
-        float pi = this.pi;
         return pi * (float) Math.pow(raio, 2);
     }
 
     @Override
     public float calcularPerimetro() {
-        float raio = this.raio;
-        float pi = this.pi;
         return 2 * pi * raio;
+    }
+
+    public float getRaio() {
+        return raio;
+    }
+
+    public float getPi() {
+        return pi;
     }
 }

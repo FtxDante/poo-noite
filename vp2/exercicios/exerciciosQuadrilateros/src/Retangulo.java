@@ -9,17 +9,12 @@ public class Retangulo extends Quadrilatero {
 
     @Override
     public float calcularArea() {
-        float lado = this.lado;
-        float altura = this.altura;
         return lado * altura;
     }
 
     @Override
     public float calcularPerimetro() {
-        float lados = 2 * this.lado;
-        float alturas = 2 * this.altura;
-
-        return alturas + lados;
+        return 2 * altura + 2 * lado;
     }
 
     public float getAltura() {
