@@ -1,16 +1,8 @@
 public class Lci extends Investimento {
 
-    public Lci (String instituicaoFinanceira, double valorAplicado, double taxaDeRendimentoAA) {
-        super(instituicaoFinanceira, valorAplicado, taxaDeRendimentoAA);
+    public Lci (String instF, String usuario, double valorA, double taxaAA) {
+        super(instF, usuario, valorA, taxaAA);
+        calculaLucro(false);
     }
 
-    public void calculaLucro() {
-        double rendimento = getTaxaDeRendimentoAA() * getValorAplicado();
-        super.setLucro(rendimento);
-    }
-
-    public double getLucro() {
-        calculaLucro();
-        return super.getLucro();
-    }
 }

@@ -1,44 +1,27 @@
 public abstract class Investimento {
-    private final double percentualDeImposto;
-    private final String instituicaoFinanceira;
-    private final double taxaDeRendimentoAA;
-    private double lucro;
-    private double valorAplicado;
+    private final String instF, usuario;
+    private double valorA, lucro;
+    private final double taxaAA, imposto = 0.15;
 
-    public Investimento(String instituicaoFinanceira, double valorAplicado, double taxaDeRendimentoAA) {
-        this.percentualDeImposto = 0.15;
-        this.instituicaoFinanceira = instituicaoFinanceira;
-        this.taxaDeRendimentoAA = taxaDeRendimentoAA;
-        this.valorAplicado = valorAplicado;
+    public Investimento(String instF, String usuario, double valorA, double taxaAA) {
+        this.instF = instF;
+        this.usuario = usuario;
+        this.valorA = valorA;
+        this.taxaAA = taxaAA;
     }
 
-    public abstract void calculaLucro();
-
-    public String getInstituicaoFinanceira() {
-        return instituicaoFinanceira;
+    public void calculaLucro(boolean temImposto) {
+        double imposto = 0;
+        if(temImposto) imposto = valorA * this.imposto;
+        double lucro = valorA + (valorA * taxaAA);
+        this.lucro = lucro - imposto;
     }
 
-    public double getPercentualDeImposto() {
-        return percentualDeImposto;
-    }
-
-    public double getValorAplicado() {
-        return valorAplicado;
-    }
-
-    public double getTaxaDeRendimentoAA() {
-        return taxaDeRendimentoAA;
-    }
-
-    public void setValorAplicado(double valorAplicado) {
-        this.valorAplicado = valorAplicado;
+    public double getValorA() {
+        return valorA;
     }
 
     public double getLucro() {
         return lucro;
-    }
-
-    public void setLucro(double lucro) {
-        this.lucro = lucro;
     }
 }
