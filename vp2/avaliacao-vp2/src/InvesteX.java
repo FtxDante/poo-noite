@@ -41,6 +41,9 @@ public class InvesteX {
     public double calculaPorcentagem (){
         double lucro = somaLucro();
         double valorA = somaValorA();
+        System.out.println("Valor Total Aplicado: R$: " + valorA);
+        System.out.println("Lucro Total: R$: " + (lucro - valorA));
+        System.out.println("Saldo Total: R$: " + lucro);
         if(lucro > valorA ) return ((lucro - valorA ) * 100)/valorA;
         return ((valorA - lucro) * 100)/valorA;
     }
