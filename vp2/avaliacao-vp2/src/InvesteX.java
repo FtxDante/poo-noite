@@ -1,17 +1,20 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class InvesteX {
-    private final Lci[] lciArray;
+    private final ArrayList<Lci> lciArray;
     private final Cdb[] cdbArray;
     private final TesouroSelic[] tesouroSelicArray;
     private int qtdLci, qtdCdb, qtdTesouro;
 
     public InvesteX() {
-        lciArray = new Lci[100];
+        lciArray = new ArrayList<>();
         cdbArray = new Cdb[100];
         tesouroSelicArray = new TesouroSelic[100];
     }
 
     public void criaInvestimentoLci (String instF, String usuario, double valorA, double taxaAA) {
-        lciArray[qtdLci++] = new Lci(instF, usuario, valorA, taxaAA);
+        lciArray.add(new Lci(instF, usuario, valorA, taxaAA));
     }
 
     public void criaInvestimentoCdb (String instF, String usuario, double valorA, double taxaAA) {
